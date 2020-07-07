@@ -5,8 +5,3 @@
 @function colors ($name) {
   @return map-get($colors, $name)
 }
-
-
-.text-center {
-  text-align: center;
-}
