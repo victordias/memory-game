@@ -1,9 +1,9 @@
 <template>
-  <div class="content">
+  <div>
     <navbar
       v-bind="nav"
     />
-    <main>
+    <main class="app__content">
       <router-view />
     </main>
   </div>
@@ -21,14 +21,26 @@ export default {
   },
   data: () => ({
     nav: {
-      title: 'Jogo da Memória',
+      title: 'Obliviate',
       image,
       links: [
-        { title: 'Sobre', to: { name: 'home.about' } },
+        { title: 'Jogo da Memória', to: { name: 'game.play' } },
         { title: 'Ranking', to: { name: 'game.ranking' } },
-        { title: 'Jogar', to: { name: 'game.play' }, styleClass: 'navbar--play' },
       ],
     },
   }),
 };
 </script>
+
+<style lang="scss">
+@import '../assets/scss/variables';
+@import '../assets/scss/utils';
+
+  .app {
+    &__content {
+      width: 100%;
+      box-sizing: border-box;
+      padding: rem($navbar-height) rem($gutter);
+    }
+  }
+</style>

@@ -2,11 +2,11 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import Play from '@/views/game/Play.vue';
 
 export default {
-  path: '/games',
+  path: '/game',
   component: DefaultLayout,
   children: [
     {
-      path: '',
+      path: 'play',
       name: 'game.play',
       meta: {
         title: 'Jogar',

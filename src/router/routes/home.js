@@ -10,16 +10,8 @@ export default {
       name: 'home.index',
       component: Home,
       meta: {
-        title: 'Seja bem-vindo(a)',
+        title: 'Jogo da Memória',
       },
-    },
-    {
-      path: 'sobre',
-      name: 'home.about',
-      meta: {
-        title: 'Sobre o jogo',
-      },
-      component: () => import(/* webpackChunkName: "about" */ '@/views/home/About.vue'),
     },
   ],
 };
