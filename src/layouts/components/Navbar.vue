@@ -48,8 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/variables';
-@import '../../assets//scss//utils';
+@import '../../assets/scss/main';
 
   .navbar {
     top: 0;

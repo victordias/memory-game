@@ -33,8 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/variables';
-@import '../assets/scss/utils';
+@import '../assets/scss/main';
 
   .app {
     &__content {
