@@ -1,8 +1,15 @@
 // colors
-$primary-color: #08225f;
-$info-color: #0394fc;
-$success-color: #739c3e;
+$colors: (
+  "primary": #08225f,
+  "secondary": #0394fc,
+  "success": #009166,
+  "white": #ffffff,
+  "grey": #404040,
+  "error": #f44336,
+);
 
 // navbar
-
 $navbar-height: 64px;
+
+// container
+$gutter: 32px;
