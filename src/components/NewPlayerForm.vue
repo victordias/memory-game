@@ -38,7 +38,7 @@ export default {
     settings() {
       return {
         title: 'Vamos começar?',
-        subtitle: 'Antes de começar, preciso conhecer um pouco mais sobre você!',
+        subtitle: 'Para isso, preciso conhecer um pouco mais sobre você!',
         actions: [
           { label: 'Voltar', to: { name: 'home.index' }, closable: true },
           { label: 'Ranking', to: { name: 'game.ranking' } },
