@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div class="card-back">
+      <div class="card__back">
         <img
           :src="image"
           alt="Paris"
@@ -48,14 +48,16 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/main';
+
 .card {
   background-color: transparent;
   width: 100%;
   height: 100%;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: rem(1000px);
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0px 0px 8px -5px rgba(0,0,0,0.75);
+  border-radius: rem(8px);
+  box-shadow: 0 0 rem(8px) rem(-5px) rgba(0,0,0,0.75);
   cursor: pointer;
 
   &--active {
@@ -66,7 +68,7 @@ export default {
   }
 
    &__inner {
-    border: 1px solid #f1f1f1;
+    border: rem(1px) solid #f1f1f1;
     position: relative;
     width: 100%;
     height: 100%;
@@ -80,22 +82,24 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
   &__container {
-      padding: 16px;
+      padding: rem(16px);
       h2 {
-        letter-spacing: 2px;
+        font-size: rem(18px);
+        letter-spacing: rem(4px);
+        text-transform: uppercase;
       }
       h2, image, p {
-        margin: 0 0 4px 0;
+        margin: 0 0 rem(4px) 0;
       }
   }
   &__image {
-    padding: 8px;
-    width: 80px;
+    padding: rem(8px);
+    width: rem(80px);
   }
 
   /* Style the front side */
@@ -112,6 +116,9 @@ export default {
     background-color: white;
     color: white;
     transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

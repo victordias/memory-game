@@ -1,5 +1,12 @@
 <template>
 <div class="round-counter">
+  <div class="round-counter__player">
+    <h5> JOGADOR </h5>
+    <h2>
+      {{ player || 'Sem nome'}}
+    </h2>
+  </div>
+
   <div class="round-counter__inner">
     <h2 class="round-counter__label"> Rodada </h2>
     <p  class="round-counter__value">
@@ -16,6 +23,7 @@ export default {
       type: Number,
       default: () => 0,
     },
+    player: String,
   },
   filters: {
     padCounter(value) {
@@ -31,32 +39,43 @@ export default {
 .round-counter {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &__inner {
     margin: rem(24px);
     text-align: center;
     border-radius: rem(6px);
     background: colors('grey');
-    max-width: rem(120px);
-    min-width: rem(100px);
     padding: rem(16px);
     color: colors('white');
     box-shadow: 3px 3px 5px 6px #ccc;
     z-index: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__label {
     color: colors('white');
-    margin: 0 0 rem(8px) 0;
-    font-size: rem(12px);
+    font-size: rem(18px);
     letter-spacing: rem(6px);
     font-weight: bold;
     text-transform: uppercase;
+    margin-right: rem(8px);
   }
   &__value {
     font-size: rem(48px);
     font-weight: bold;
     margin: 0;
+  }
+
+  &__player {
+    h2, h5 {
+      margin: rem(4px);
+    }
+    h2 {
+      color: colors('primary')
+    }
   }
 }
 </style>

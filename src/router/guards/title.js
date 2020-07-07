@@ -1,4 +1,4 @@
-export default function (to, _from, next) {
+export default function changeTitle(to, _from, next) {
   const { meta: { title } } = to.matched.find(({ meta }) => meta.title);
 
   if (title) {

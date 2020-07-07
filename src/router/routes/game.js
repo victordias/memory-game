@@ -2,11 +2,11 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import Play from '@/views/game/Play.vue';
 
 export default {
-  path: '/game',
+  path: '/jogo-da-memoria',
   component: DefaultLayout,
   children: [
     {
-      path: 'play',
+      path: 'jogar',
       name: 'game.play',
       meta: {
         title: 'Jogar',
@@ -14,10 +14,10 @@ export default {
       component: Play,
     },
     {
-      path: 'ranking',
+      path: 'hall-da-fama',
       name: 'game.ranking',
       meta: {
-        title: 'Top Player',
+        title: 'Hall da Fama',
       },
       component: () => import(/* webpackChunkName: "ranking" */ '@/views/game/Ranking.vue'),
     },

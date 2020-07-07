@@ -39,8 +39,8 @@ export default {
    justify-content: center;
 
    &__item {
-     width: 15%;
-     flex-basis: 15;
+     width: 12%;
+     flex-basis: 12%;
      padding: rem(8px);
      height: 200px;
    }

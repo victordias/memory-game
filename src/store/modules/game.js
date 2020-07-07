@@ -4,7 +4,7 @@ import Vue from 'vue';
 export default {
   state: () => ({
     player: null,
-    round: 1,
+    round: 0,
     cards: Deck.build(),
     selections: [],
   }),
@@ -36,11 +36,14 @@ export default {
     INCREMENT_ROUND(state) {
       state.round += 1;
     },
-    RESET(state) {
-      state.cards.forEach((it) => { it.active = false; });
+    SET_PLAYER_NAME(state, name) {
+      state.player = name;
     },
-    SHUFFLE_CARDS(state) {
-      Deck.suffle(state.cards);
+    RESET(state) {
+      state.player = '';
+      state.round = 0;
+      state.selections = [];
+      state.cards = Deck.build();
     },
   },
 

@@ -36,15 +36,17 @@ export default {
 
     &__title {
       font-size: rem(64px);
-      color: colors('secondary');
+      color: colors('primary');
       font-weight: 300;
       margin-bottom: 0;
     }
 
     &__subtitle {
-      font-size: rem(32px);
+      font-size: rem(24px);
       margin-top: 0;
-      color: colors('grey');
+      text-transform: uppercase;
+      color: colors('secondary');
+      letter-spacing: rem(3px);
     }
 
     &__btn {
