@@ -52,28 +52,33 @@ export default {
 @import '../../assets//scss//utils';
 
   .navbar {
+    top: 0;
     display: inline-flex;
+    position: fixed;
     padding: rem(12px) rem(24px);
-    background: $primary-color;
+    background: colors('primary');
     width: 100%;
     height: $navbar-height;
     align-items: center;
     box-sizing: border-box;
+    box-shadow: 0px 0px 31px -5px rgba(0,0,0,0.75);
+    z-index: 2;
 
     &__brand {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
       &:visited {
-        color: $info-color;
+        color: colors('white');
       }
     }
 
     &__title {
       font-size: $navbar-height / 3;
-      color: $info-color;
+      color: colors('white');
       font-weight: bold;
       margin: 0 rem(12px);
+      letter-spacing: rem(2px);
     }
 
     &__image {
@@ -96,16 +101,17 @@ export default {
 
     &__link {
       text-decoration: none;
-      color: #ffffff;
+      color: colors('white');
       padding: rem(12px) rem(24px);
       border-radius: rem(4px);
+      letter-spacing: rem(1.5px);
 
       &:visited {
-        color: #ffffff;
+        color: colors('white');
       }
       &--active {
         font-weight: bold;
-        background: $info-color;
+        background: colors('secondary');
       }
     }
   }
