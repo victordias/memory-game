@@ -45,8 +45,14 @@ export default {
     margin:  auto;
     max-width: rem(1280px);
 
+    @include xsOnly {
+      flex-flow: column wrap;
+    }
+
     & div {
-      width: 50%;
+      @include smAndUp {
+        width: 50%;
+      }
       padding: rem(16px);
     }
   }

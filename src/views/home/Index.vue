@@ -2,7 +2,7 @@
 <section>
   <div class="text-center presentation">
     <h1 class="presentation__title">
-      Bem-vindo ao Obliviate!
+      Obliviate!
     </h1>
     <p class="presentation__subtitle">
       O Jogo da Memória
@@ -49,7 +49,7 @@ export default {
     }
 
     &__subtitle {
-      font-size: rem(24px);
+      font-size: rem(22px);
       margin-top: 0;
       text-transform: uppercase;
       color: colors('secondary');
@@ -57,14 +57,14 @@ export default {
     }
 
     &__btn {
-      background: colors('success');
+      background: colors('secondary');
       color: colors('white');
       font-weight: bold;
       font-size: rem(24px);
       padding: rem(24px) rem(36px);
       text-decoration: none;
       border-radius: rem(4px);
-      display: block;
+      transition: all 0.3s ease;
 
       @include smAndUp {
         max-width: 300px;
@@ -72,8 +72,8 @@ export default {
       }
 
       &:hover {
-        $color: colors('success');
-        background: lighten($color, 2%);
+        $color: colors('secondary');
+        background: darken($color, 10%);
       }
 
       &-container {
@@ -100,5 +100,10 @@ export default {
     color: colors('accent');
     font-weight: bold;
     font-size: rem(22px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      font-size: rem(28px);
+    }
   }
 </style>

@@ -4,7 +4,9 @@
       v-bind="nav"
     />
     <main class="app__content">
-      <router-view />
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </main>
   </div>
 

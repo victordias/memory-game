@@ -67,6 +67,11 @@ export default {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
+
+      @include xsOnly {
+        margin: 0 auto;
+      }
+
       &:visited {
         color: colors('white');
       }
