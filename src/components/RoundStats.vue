@@ -27,7 +27,7 @@ export default {
   },
   filters: {
     padCounter(value) {
-      return String(value).padStart(3, '0');
+      return String(value).padStart(2, '0');
     },
   },
 };
@@ -40,6 +40,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  @include mdAndUp {
+    flex-direction: row;
+  }
 
   &__inner {
     margin: rem(24px);
@@ -53,6 +58,11 @@ export default {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+
+    @include xsOnly {
+      display: flex;
+      flex-flow: column;
+    }
   }
 
   &__label {

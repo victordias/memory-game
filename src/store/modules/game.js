@@ -12,7 +12,7 @@ export default {
   mutations: {
     ADD_CARD_TO_SELECTIONS(state, idx) {
       // add only two cards to selections
-      if (state.selections.length <= 1) {
+      if (state.selections.length <= 1 && !state.selections.includes(idx)) {
         Vue.set(state.cards[idx], 'active', true);
         state.selections.push(idx);
       }

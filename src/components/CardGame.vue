@@ -87,19 +87,36 @@ export default {
   }
 
   &__container {
-      padding: rem(16px);
-      h2 {
-        font-size: rem(18px);
+    padding: rem(16px);
+    h2 {
+      font-size: rem(12px);
+      letter-spacing: rem(2px);
+      text-transform: uppercase;
+
+      @include mdAndUp {
+        font-size: rem(14px);
         letter-spacing: rem(4px);
-        text-transform: uppercase;
       }
-      h2, image, p {
-        margin: 0 0 rem(4px) 0;
+
+    }
+    p {
+      @include xsOnly {
+        font-size: rem(10px);
       }
+      white-space: nowrap;
+      font-size: rem(12px);
+    }
+    h2, image, p {
+      margin: 0 0 rem(4px) 0;
+    }
   }
   &__image {
     padding: rem(8px);
-    width: rem(80px);
+    width: rem(60px);
+
+    @include xsOnly {
+      width: rem(30px);
+    }
   }
 
   /* Style the front side */

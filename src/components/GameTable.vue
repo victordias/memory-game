@@ -30,19 +30,41 @@ export default {
 <style lang="scss">
 @import '../assets/scss/main';
 
+  @mixin cardSize ($size, $pa: 8px) {
+    width: rem($size);
+    height: rem($size);
+    flex-basis: rem($size);
+    padding: rem($pa);
+  }
+
  .game-table {
    display: flex;
    flex-flow: row wrap;
-   width: 100%;
    box-sizing: border-box;
-   padding: 0 rem(8px);
    justify-content: center;
+   margin: 0 auto;
 
-   &__item {
-     width: 12%;
-     flex-basis: 12%;
-     padding: rem(8px);
-     height: 200px;
-   }
+  &__item {
+    @include xsOnly {
+      @include cardSize(105px, 6px);
+    }
+
+    @include smAndUp {
+      @include cardSize(120px);
+    }
+
+    @include mdAndUp {
+      @include cardSize(125px);
+    }
+
+    @include lgAndUp {
+      @include cardSize(150px);
+    }
+
+    @include xlOnly {
+      @include cardSize(220px);
+    }
+  }
+
  }
 </style>

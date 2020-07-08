@@ -40,7 +40,12 @@ export default {
       width: 100%;
       box-sizing: border-box;
       position: relative;
-      padding: rem($navbar-height) rem($gutter);
+      padding: 8px;
+      padding-top: rem($navbar-height) + rem(16px);
+
+      @include mdAndUp {
+        padding: rem($navbar-height) rem($gutter);
+      }
     }
   }
 </style>

@@ -95,7 +95,7 @@ export default {
 
   .modal {
     background: colors('white');
-    width: 400px;
+    max-width: rem(400px);
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -103,6 +103,10 @@ export default {
     padding: rem(24px);
     border-radius: rem(8px);
     box-shadow: 0 0 rem(8px) rem(-5px) rgba(0,0,0,0.75);
+
+    @include xsOnly {
+      max-width: rem(280px);
+    }
 
     &__title {
       margin: 0 0 rem(8px) 0;
@@ -133,6 +137,11 @@ export default {
       border-top: rem(1px) solid lighten(colors('grey'), 60%);
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+
+      @include mdAndUp {
+        flex-direction: row;
+      }
     }
 
     &__btn {
@@ -140,6 +149,9 @@ export default {
       border-radius: rem(4px);
       background: transparent;
       text-decoration: none;
+      text-align: center;
+      margin: rem(4px);
+
       @include button('primary');
 
       &--close {
