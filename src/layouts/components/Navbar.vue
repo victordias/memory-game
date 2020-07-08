@@ -86,6 +86,9 @@ export default {
     }
 
     &__links {
+      @include xsOnly {
+        display: none;
+      }
       margin-left: auto;
       ul {
         list-style: none;

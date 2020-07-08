@@ -1,4 +1,5 @@
 <template>
+<section>
   <div class="text-center presentation">
     <h1 class="presentation__title">
       Bem-vindo ao Obliviate!
@@ -19,6 +20,12 @@
       </router-link>
     </div>
   </div>
+  <div class="text-center">
+    <router-link :to="{ name: 'game.ranking' }" class="ranking-link">
+      Hall da Fama
+    </router-link>
+  </div>
+</section>
 </template>
 
 <script>
@@ -58,12 +65,15 @@ export default {
       text-decoration: none;
       border-radius: rem(4px);
       display: block;
-      max-width: 300px;
-      min-width: 300px;
+
+      @include smAndUp {
+        max-width: 300px;
+        min-width: 300px;
+      }
 
       &:hover {
         $color: colors('success');
-        background: lighten($color, 10%);
+        background: lighten($color, 2%);
       }
 
       &-container {
@@ -73,11 +83,22 @@ export default {
     }
 
     &__image {
-      padding: rem(32px);
       width: 100%;
       height: auto;
       max-width: rem(500px);
       margin-bottom: rem(36px);
+
+      @include lgAndUp {
+        padding: rem(32px);
+      }
     }
+  }
+  .ranking-link {
+    margin-top: rem(24px);
+    padding: rem(16px);
+    text-decoration: none;
+    color: colors('accent');
+    font-weight: bold;
+    font-size: rem(22px);
   }
 </style>

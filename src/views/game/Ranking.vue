@@ -102,7 +102,7 @@ export default {
 
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-          background-color: lighten(#a89968, $i * 10%);
+          background-color: lighten(colors('accent'), $i * 10%);
           span {
             color: colors('primary');
             font-weight: bold;
