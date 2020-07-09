@@ -30,7 +30,7 @@ npm run dev
 npm run build
 ```
 
-### Execute teste E2E
+### Executar testes de E2E
 Para execução de teste, devido o uso da aplicação cypress, é necessário
 ter instalado navegador Google Chrome.
 
