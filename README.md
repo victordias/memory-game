@@ -41,7 +41,7 @@ npm run test:e2e
 
 ### Analisador de sintaxes do código fonte
 
-Projeto utilizou o padrão AIRBNB.
+Projeto utilizou o padrão **airbnb**.
 
 ```bash
 npm run lint
