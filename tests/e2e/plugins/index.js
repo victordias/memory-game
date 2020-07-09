@@ -15,6 +15,8 @@ module.exports = (on, config) => {
   //  watchOptions: {}
   // }))
 
+  'vuex';
+
   return {
     ...config,
     fixturesFolder: 'tests/e2e/fixtures',
