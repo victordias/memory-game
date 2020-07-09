@@ -7,7 +7,8 @@ https://obliviate.vercel.app/
 
 ## Requerimentos
 
-- node 12
+- NodeJS 12
+- Google Chrome (rodar os testes e2e)
 
 ## Setup do Projeto
 
