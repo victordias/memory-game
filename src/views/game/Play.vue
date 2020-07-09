@@ -2,7 +2,7 @@
   <section class="obliviate">
     <div class="obliviate__game">
       <round-stats
-        :value="round"
+        :round="round"
         :player="player"
       />
       <game-table

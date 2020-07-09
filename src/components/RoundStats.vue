@@ -10,7 +10,7 @@
   <div class="round-counter__inner">
     <h2 class="round-counter__label"> Rodada </h2>
     <p  class="round-counter__value">
-      {{ value | padCounter }}
+      {{ round | padCounter }}
     </p>
   </div>
 </div>
@@ -19,7 +19,7 @@
 <script>
 export default {
   props: {
-    value: {
+    round: {
       type: Number,
       default: () => 0,
     },
