@@ -4,6 +4,7 @@
     <div
       v-for="(card, idx) of cards"
       class="game-table__item"
+      :class="isE2E? `card-value__${card.value}`: ''"
       :key="card.id"
     >
       <card-game
@@ -23,6 +24,9 @@ export default {
   },
   props: {
     cards: Array,
+  },
+  computed: {
+    isE2E: () => !!process.env.VUE_APP_IS_E2E,
   },
 };
 </script>

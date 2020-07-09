@@ -1,7 +1,7 @@
 <template>
   <div class="modal-container" v-if="value">
 
-    <div class="modal">
+    <div class="modal" :class="styleClass">
       <h1 class="modal__title">{{ title }} </h1>
       <p class="modal__subtitle text-center" v-if="subtitle">{{ subtitle }} </p>
       <div class="modal__content">
@@ -23,8 +23,10 @@
           <button
             v-if="action.click"
             class="modal__btn"
+            :id="action.id"
             :class="[
-              {'modal__btn--close': action.closable }
+              {'modal__btn--close': action.closable },
+              action.styleClass
             ]"
             @click="action.click"
             :key="idx"
@@ -57,6 +59,7 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    styleClass: [String, Object, Array],
     actions: {
       type: Array,
       default: () => ([]),

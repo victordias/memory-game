@@ -10,6 +10,7 @@
       <input
          v-model="player"
          type="text"
+         class="player__name"
          name="player"
       />
       <p v-if="message" class="error-message">
@@ -40,9 +41,11 @@ export default {
         title: 'Vamos começar?',
         subtitle: 'Para isso, preciso conhecer um pouco mais sobre você!',
         actions: [
-          { label: 'Voltar', to: { name: 'home.index' }, closable: true },
-          { label: 'Ranking', to: { name: 'game.ranking' } },
-          { label: 'Continuar', click: this.submit },
+          {
+            label: 'Voltar', to: { name: 'home.index' }, closable: true, id: 'game__home',
+          },
+          { label: 'Ranking', to: { name: 'game.ranking' }, id: 'game_hall' },
+          { label: 'Continuar', click: this.submit, id: 'game__start' },
         ],
       };
     },

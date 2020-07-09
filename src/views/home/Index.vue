@@ -11,10 +11,10 @@
       class="presentation__image"
       :src="require('@/assets/images/obliviate-card-game.svg')"
     />
-    <div class="presentation__btn-container">
+    <div class="presentation__btns">
       <router-link
         :to="{ name: 'game.play' }"
-        class="presentation__btn"
+        class="presentation__startgame"
       >
         Jogar Agora
       </router-link>
@@ -41,6 +41,11 @@ export default {
     max-width: rem(700px);
     margin: rem(12px) auto;
 
+    &__btns {
+      display: flex;
+      justify-content: center;
+    }
+
     &__title {
       font-size: rem(64px);
       color: colors('primary');
@@ -56,7 +61,7 @@ export default {
       letter-spacing: rem(3px);
     }
 
-    &__btn {
+    &__startgame {
       background: colors('secondary');
       color: colors('white');
       font-weight: bold;
@@ -74,11 +79,6 @@ export default {
       &:hover {
         $color: colors('secondary');
         background: darken($color, 10%);
-      }
-
-      &-container {
-        display: flex;
-        justify-content: center;
       }
     }
 

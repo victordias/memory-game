@@ -2,6 +2,7 @@
   <modal
     :value="value"
     v-bind="settings"
+    styleClass="game-over__modal"
   >
     <div class="game-over text-center">
       <p class="game-over__title">Rodadas</p>
@@ -25,10 +26,10 @@ export default {
   computed: {
     settings() {
       return {
-        title: `Parabéns, ${this.player || 'Sem nome'}! \\o/`,
+        title: `Parabéns, ${this.player || 'Sem nome'}!`,
         actions: [
-          { label: 'Nova Partida', click: this.submit },
-          { label: 'Hall da Fama', to: { name: 'game.ranking' } },
+          { label: 'Nova Partida', click: this.submit, id: 'game__restart' },
+          { label: 'Hall da Fama', to: { name: 'game.ranking' }, id: 'game__ranking-link' },
         ],
       };
     },

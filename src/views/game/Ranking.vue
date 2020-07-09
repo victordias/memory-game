@@ -14,7 +14,7 @@
     <div class="ranking">
       <ol v-if="topPlayers.length > 0" class="ranking__list">
         <li v-for="(player, idx) of topPlayers" :key="idx" class="ranking__item">
-          <span> {{ player.player | 'Sem nome'}} </span>
+          <span> {{ player.player || 'Sem nome'}} </span>
           <small> ({{ player.rounds | 0 }}) </small>
         </li>
       </ol>
