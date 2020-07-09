@@ -26,6 +26,9 @@ export default {
     cards: Array,
   },
   computed: {
+    /**
+     * check if is end-to-end runtime
+     */
     isE2E: () => !!process.env.VUE_APP_IS_E2E,
   },
 };

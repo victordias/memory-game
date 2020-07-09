@@ -1,9 +1,13 @@
 import title from './title';
 
-const middlware = [
+const middleware = [
   title,
 ];
 
+/**
+ * Execute the vue guards middleware
+ * @param {VueRouterInstance} router router
+ */
 export default function exec(router) {
-  middlware.forEach((guard) => router.beforeEach(guard));
+  middleware.forEach((guard) => router.beforeEach(guard));
 }

@@ -10,6 +10,17 @@ export default {
   }),
 
   mutations: {
+    /**
+     * Add a card to selections and check if
+     * two cards select is the same.
+     *
+     * if true, keep cards active state
+     * if false, flip both card to initial state
+     *
+     * finally increment round counter
+     * @param {VuexState} state state
+     * @param {Number} idx card index
+     */
     ADD_CARD_TO_SELECTIONS(state, idx) {
       // add only two cards to selections
       if (state.selections.length <= 1 && !state.selections.includes(idx)) {
@@ -33,12 +44,28 @@ export default {
         }, timeout);
       }
     },
+
+    /**
+     * Increase round counter
+     * @param {VuexState} state state
+     */
     INCREMENT_ROUND(state) {
       state.round += 1;
     },
+
+    /**
+     * Set current player
+     * @param {VuexState} state state
+     * @param {String} name player name
+     */
     SET_PLAYER_NAME(state, name) {
       state.player = name;
     },
+
+    /**
+     * Reset game variables, to initial values
+     * @param {VuexState} state state
+     */
     RESET(state) {
       state.player = '';
       state.round = 0;

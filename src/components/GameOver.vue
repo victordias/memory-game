@@ -24,18 +24,24 @@ export default {
     player: String,
   },
   computed: {
+    /**
+     * Modal settings
+     */
     settings() {
       return {
         title: `Parabéns, ${this.player || 'Sem nome'}!`,
         actions: [
-          { label: 'Nova Partida', click: this.submit, id: 'game__restart' },
+          { label: 'Nova Partida', click: this.restart, id: 'game__restart' },
           { label: 'Hall da Fama', to: { name: 'game.ranking' }, id: 'game__ranking-link' },
         ],
       };
     },
   },
   methods: {
-    submit() {
+    /**
+     * Restart Game and closes modal
+     */
+    restart() {
       this.$emit('submit');
       this.$emit('input', false);
     },

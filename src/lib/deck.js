@@ -1,3 +1,8 @@
+/**
+ * Suffle a card list
+ * @param {Array} cards list of cards
+ * @returns a list of suffled cards
+ */
 function suffle(cards) {
   const deck = cards;
   const cutDeckVariant = deck.length / 2 + Math.floor(Math.random() * 9) - 4;
@@ -17,6 +22,10 @@ function suffle(cards) {
   return deck;
 }
 
+/**
+ * build a paired card list
+ * @returns list of cards
+ */
 function build() {
   const cards = [];
 

@@ -4,6 +4,10 @@ export default {
   }),
 
   getters: {
+    /**
+     * Get the first 10th players
+     * @param {VuexState} state state
+     */
     topPlayers(state) {
       let { length } = state.plays;
       if (length > 10) length = 10;
@@ -14,6 +18,12 @@ export default {
   },
 
   mutations: {
+    /**
+     * Save the game stats
+     * @param {VuexState} state state
+     * @param {String} player player name
+     * @param {Number} rounds rounds
+     */
     SAVE_STATS(state, { player, rounds }) {
       state.plays.push({
         player,

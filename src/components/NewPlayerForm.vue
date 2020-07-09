@@ -3,7 +3,7 @@
     v-model="value"
     v-bind="settings"
   >
-    <form @submit.prevent="submit">
+    <form @submit.prevent="start">
       <label for="player">
         Qual seu nome?
       </label>
@@ -45,13 +45,16 @@ export default {
             label: 'Voltar', to: { name: 'home.index' }, closable: true, id: 'game__home',
           },
           { label: 'Ranking', to: { name: 'game.ranking' }, id: 'game_hall' },
-          { label: 'Continuar', click: this.submit, id: 'game__start' },
+          { label: 'Continuar', click: this.start, id: 'game__start' },
         ],
       };
     },
   },
   methods: {
-    submit() {
+    /**
+     * Start game, verify player name exits and close modal if form valid
+     */
+    start() {
       if (!this.player) {
         this.message = 'Nome é obrigatório';
       } else {

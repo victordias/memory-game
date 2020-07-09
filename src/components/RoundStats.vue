@@ -26,6 +26,10 @@ export default {
     player: String,
   },
   filters: {
+    /**
+     * Add pattern string to left of value
+     * @param value round value
+     */
     padCounter(value) {
       return String(value).padStart(2, '0');
     },
